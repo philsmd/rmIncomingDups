@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!-- Copyright 2012 Philsmd (philipp AT PSCHMIDT.it)
+     
+     
+     This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+   - You can obtain one at http://mozilla.org/MPL/2.0/.  -->
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+    <Description about="urn:mozilla:install-manifest">
+        <em:id>rmIncomingDups@pschmidt.it</em:id>
+        <em:version>0.1</em:version>
+        <em:description>rmIncomingDups is a Thunderbird extension that checks if there are duplicate messages across accounts.
+            
+When a new mail arrives rmIncomingDups checks according to the rules configured if it finds some duplicates and removes them.</em:description>
+        <em:homepageURL>http://www.pschmidt.it/</em:homepageURL>
+        <em:type>2</em:type>
+        <em:optionsURL>chrome://rmIncomingDups/content/options.xul</em:optionsURL>
+        <em:iconURL>chrome://rmIncomingDups/skin/toolbar-large.png</em:iconURL>
+        <em:localized>
+            <Description>
+                <em:name>rmIncomingDups</em:name>
+                <em:creator>Philipp Schmidt</em:creator>
+                <em:locale>en</em:locale>
+                <em:description>rmIncomingDups is a Thunderbird extension that checks if there are duplicate messages across accounts.
+            
+When a new mail arrives rmIncomingDups checks according to the rules configured if it finds some duplicates and removes them.</em:description>
+                <em:translator>Philipp Schmidt</em:translator>
+            </Description>
+        </em:localized>
+        <em:localized>
+            <Description>
+                <em:name>rmIncomingDups</em:name>
+                <em:creator>Philipp Schmidt</em:creator>
+                <em:locale>de</em:locale>
+                <em:description>rmIncomingDups löscht Email-Duplikate in mehreren Accounts je nach eingestellen Regeln.
+            
+Wenn eine neue Nachricht eintrifft, kontrolliert rmIncomingDups ob einige der Mails identisch zu den schon vorhandenen sind und führt die eingestellte Aktion der Regel durch.</em:description>
+                <em:translator>Philipp Schmidt</em:translator>
+            </Description>
+        </em:localized>
+        <em:localized>
+            <Description>
+                <em:name>rmIncomingDups</em:name>
+                <em:creator>Philipp Schmidt</em:creator>
+                <em:locale>it</em:locale>
+                <em:description>rmIncomingDups é un'estensione thunderbird per eliminare duplicati in email account distinti.
+            
+All'arrivo di un mail, rmIncomingDups controlla se una mail identica esiste ed applica l'azione configurata nella regola.</em:description>
+                <em:translator>Philipp Schmidt</em:translator>
+            </Description>
+        </em:localized>
+        <em:targetApplication>
+            <Description>
+                <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+                <em:minVersion>11.0</em:minVersion>
+                <em:maxVersion>15.2b2</em:maxVersion>
+            </Description>
+        </em:targetApplication>
+    </Description>      
+</RDF>

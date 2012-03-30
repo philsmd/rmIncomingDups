@@ -1,0 +1,48 @@
+<!ENTITY rmIncomingDupsRuleNameLabel "Name:">
+<!ENTITY rmIncomingDupsRuleDescriptionLabel "Beschreibung:">
+<!ENTITY rmIncomingDups.accountColumn.label "Ausgewählte Konten:">
+<!ENTITY rmIncomingDups.menu.label "Remove Incoming Duplicates Einstellungen">
+<!ENTITY rmIncomingDups.menu.accesskey "D">
+<!ENTITY rmIncomingDups.toolbar.label "Remove Incoming Duplicates">
+<!ENTITY prefs_dialog_title "Remove Incoming Duplicates - Einstellungen">
+<!ENTITY message_comparison.tab_title "Duplikat-Erkennung">
+<!ENTITY message_comparison.criteria_box.label "Vergleichskriterium:">
+<!ENTITY message_comparison.tab_description "Vergleichskriterium:">
+<!ENTITY message_comparison.author.label "Autor (&apos;Von&apos;)">
+<!ENTITY message_comparison.message_id.label "Mitteilung ID">
+<!ENTITY message_comparison.num_lines.label "Zeilennummer">
+<!ENTITY message_comparison.send_time.label "Sendezeit">
+<!ENTITY message_comparison.size.label "Grösse">
+<!ENTITY message_comparison.subject.label "Betreff">
+<!ENTITY message_comparison.body.label "Inhalt">
+<!ENTITY message_comparison.author.access_key "A">
+<!ENTITY message_comparison.message_id.access_key "I">
+<!ENTITY message_comparison.num_lines.access_key "l">
+<!ENTITY message_comparison.send_time.access_key "t">
+<!ENTITY message_comparison.size.access_key "g">
+<!ENTITY message_comparison.subject.access_key "B">
+<!ENTITY message_comparison.body.access_key "h">
+<!ENTITY message_comparison.time_comparison_resolution.description "Zeitspanne:">
+<!ENTITY message_comparison.time_comparison_resolution.seconds.label "Sekunden">
+<!ENTITY message_comparison.time_comparison_resolution.minutes.label "Minuten">
+<!ENTITY message_comparison.time_comparison_resolution.hours.label "Stunden">
+<!ENTITY message_comparison.time_comparison_resolution.day.label "Tag">
+<!ENTITY message_comparison.time_comparison_resolution.3days.label "3 Tage">
+<!ENTITY general_settings.tab_title "Allgemein">
+<!ENTITY general_settings.default_action.description "Aktion:">
+<!ENTITY general_settings.default_action.mark_read.label "Als gelesen markieren">
+<!ENTITY general_settings.default_action.move.label "In Papierkorb verschieben (ungelesen)">
+<!ENTITY general_settings.default_action.delete.label "Löschen (gelesen)">
+<!ENTITY general_settings.default_action.delete_permanently.label "Permanent löschen">
+<!ENTITY general_settings.default_action.mark_read.accesskey "g">
+<!ENTITY general_settings.default_action.move.accesskey "v">
+<!ENTITY general_settings.default_action.delete.accesskey "L">
+<!ENTITY general_settings.default_action.delete_permanently.accesskey "P">
+<!ENTITY rules_settings.tab_title "Regeln">
+<!ENTITY rules_settings.description "Regeln:">
+<!ENTITY rules_settings.nameColumn.label "Name">
+<!ENTITY rules_settings.descriptionColumn.label "Beschreibung">
+<!ENTITY rules_settings.accountsColumn.label "Konten">
+<!ENTITY rules_settings.deleteButton.label "Löschen">
+<!ENTITY rules_settings.addButton.label "Neu">
+<!ENTITY rules_settings.modifyButton.label "Ändern">

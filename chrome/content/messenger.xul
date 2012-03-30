@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!-- Copyright 2012 - philsmd (philipp AT PSCHMIDT.it)
+     
+     This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+   - You can obtain one at http://mozilla.org/MPL/2.0/.  -->
+<!DOCTYPE dialog SYSTEM "chrome://rmIncomingDups/locale/rmIncomingDups.dtd">
+<overlay id="rmIncomingDupsOverlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="text/javascript" src="chrome://rmIncomingDups/content/rmIncomingDups.js"/>
+    <script type="text/javascript">
+        rmIncomingDups.startListener();
+    </script>
+    <menupopup id="taskPopup">
+      <menuseparator/>
+      <menuitem id="rmIncomingDupsMenuitem" label="&rmIncomingDups.menu.label;" accesskey="&rmIncomingDups.menu.accesskey;" 
+        oncommand="rmIncomingDups.openOptionDialog();"/>
+    </menupopup>
+
+    <statusbar id="status-bar">
+        <statusbarpanel id="rmIncomingDupsStatusBarIcon" class="statusbarpanel-menu-iconic" src="chrome://rmIncomingDups/skin/status-bar.png"
+          onclick="rmIncomingDups.openOptionDialog();"/>
+    </statusbar>
+
+    <toolbarpalette id="MailToolbarPalette">
+        <toolbarbutton id="rmIncomingDupsToolbarButton" image="chrome://rmIncomingDups/skin/toolbar-large.png" label="&rmIncomingDups.toolbar.label;" 
+          tooltiptext="&rmIncomingDups.toolbar.label;" onclick="rmIncomingDups.openOptionDialog();"/>
+    </toolbarpalette>
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="rmIncomingDupsTranslations" src="chrome://rmIncomingDups/locale/rmIncomingDups.properties"/>
+    </stringbundleset>
+</overlay>

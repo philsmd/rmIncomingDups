@@ -1,0 +1,6 @@
+content   rmIncomingDups    chrome/content/
+overlay   chrome://messenger/content/mailWindowOverlay.xul          chrome://rmIncomingDups/content/messenger.xul
+skin      rmIncomingDups    classic/1.0    skin/
+locale    rmIncomingDups    en    locale/en-US/
+locale    rmIncomingDups    de    locale/de-DE/
+locale    rmIncomingDups    it    locale/it-IT/

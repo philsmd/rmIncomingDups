@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!-- Copyright 2012 - philsmd (philipp AT PSCHMIDT.it)
+     
+     This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+   - You can obtain one at http://mozilla.org/MPL/2.0/.  -->
+<?xml-stylesheet href="chrome://communicator/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://messenger/skin/prefPanels.css" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://rmIncomingDups/locale/rmIncomingDups.dtd">
+<dialog xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" buttons="accept,cancel" onload="rmIncomingDups.onUpdRuleDialog(this)"
+  title="" ondialogaccept="return rmIncomingDups.saveNewRule();">
+    <script type="text/javascript" src="chrome://rmIncomingDups/content/rmIncomingDups.js"/>
+    <hbox flex="1">
+        <groupbox>
+            <caption id="ruleDialogTitle" label=""/>
+            <grid>
+                <columns>  
+                    <column/>  
+                    <column flex="1"/>  
+                </columns>  
+                <rows>  
+                    <row align="center">  
+                        <label control="rmIncomingDups-rulename" value="&rmIncomingDupsRuleNameLabel;"/>
+                        <textbox id="rmIncomingDups-rulename"/>
+                    </row>  
+                    <row align="center">  
+                        <label control="rmIncomingDups-description" value="&rmIncomingDupsRuleDescriptionLabel;"/>
+                        <textbox id="rmIncomingDups-description"/>
+                    </row>  
+                </rows>
+            </grid>
+            <hbox>
+                <listbox id="allAccountNamesListCheckBox" minwidth="285px">
+                    <listhead>
+                        <listheader label="&rmIncomingDups.accountColumn.label;" minwidth="280px"/>
+                    </listhead>
+                    <listcols>
+                        <listcol/>
+                    </listcols>
+                </listbox>
+            </hbox>
+        </groupbox> 
+    </hbox>
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="rmIncomingDupsTranslations" src="chrome://rmIncomingDups/locale/rmIncomingDups.properties"/>
+    </stringbundleset>
+</dialog>

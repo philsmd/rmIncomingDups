@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!-- Copyright 2012 - philsmd (philipp AT PSCHMIDT.it)
+     
+     This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this file,
+   - You can obtain one at http://mozilla.org/MPL/2.0/.  -->
+<?xml-stylesheet href="chrome://global/skin/"?>
+<?xml-stylesheet href="chrome://messenger/skin/preferences/preferences.css"?>
+<!DOCTYPE page SYSTEM "chrome://rmIncomingDups/locale/rmIncomingDups.dtd">
+<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefs_dialog_title;" dlgbuttons="accept,cancel" minwidth="400">
+    <script type="text/javascript" src="chrome://rmIncomingDups/content/rmIncomingDups.js"/>
+    <prefpane id="rmIncomingDupsPrefPane" onpaneload="rmIncomingDups.setRuleList()">
+        <preferences id="rmIncomingDupsPrefs">
+            <preference id="extensions.rmIncomingDups.compareAuthor" name="extensions.rmIncomingDups.compareAuthor" type="bool"/>
+            <preference id="extensions.rmIncomingDups.compareMessageId" name="extensions.rmIncomingDups.compareMessageId" type="bool"/>
+            <preference id="extensions.rmIncomingDups.compareLines" name="extensions.rmIncomingDups.compareLines" type="bool"/>
+            <preference id="extensions.rmIncomingDups.compareSendTime" name="extensions.rmIncomingDups.compareSendTime" type="bool"/>
+            <preference id="extensions.rmIncomingDups.compareSize" name="extensions.rmIncomingDups.compareSize" type="bool"/>
+            <preference id="extensions.rmIncomingDups.compareSubject" name="extensions.rmIncomingDups.compareSubject" type="bool"/>
+            <preference id="extensions.rmIncomingDups.compareBody" name="extensions.rmIncomingDups.compareBody" type="bool"/>
+            <preference id="extensions.rmIncomingDups.confirm" name="extensions.rmIncomingDups.confirm" type="bool"/>
+            <preference id="extensions.rmIncomingDups.action" name="extensions.rmIncomingDups.action" type="string"/>
+            <preference id="extensions.rmIncomingDups.compareTime" name="extensions.rmIncomingDups.compareTime" type="string"/>
+        </preferences>
+        <tabbox id="prefsTabBox" flex="1" persist="selectedIndex">
+            <tabs id="prefsTabs">
+                <tab id="general_settings_tab" label="&general_settings.tab_title;" />
+                <tab id="message_comparison_tab" label="&message_comparison.tab_title;" />
+                <tab id="rules_settings_tab" label="&rules_settings.tab_title;" />
+            </tabs>
+            <tabpanels flex="1">
+                <tabpanel id="general_settings_panel">
+                    <vbox flex="1">
+                        <groupbox>
+                            <caption label="&general_settings.default_action.description;"/>
+                            <radiogroup preference="extensions.rmIncomingDups.action" prefstring="extensions.rmIncomingDups.action" id="extensions.rmIncomingDups.action">
+                              <radio value="mark_read" label="&general_settings.default_action.mark_read.label;"
+                                accesskey="&general_settings.default_action.mark_read.accesskey;"/>
+                              <radio value="move" label="&general_settings.default_action.move.label;" 
+                                accesskey="&general_settings.default_action.move.accesskey;"/>
+                              <radio value="delete" label="&general_settings.default_action.delete.label;"
+                                accesskey="&general_settings.default_action.delete.accesskey;"/>
+                              <radio value="delete_permanently" label="&general_settings.default_action.delete_permanently.label;"
+                                accesskey="&general_settings.default_action.delete_permanently.accesskey;"/>
+                            </radiogroup>
+                        </groupbox>
+                    </vbox>
+                </tabpanel>
+                <tabpanel id="comparison_criteria_panel">
+                    <vbox flex="1">
+                        <groupbox>
+                            <caption label="&message_comparison.criteria_box.label;"/>
+                            <vbox flex="1">
+                                <checkbox preference="extensions.rmIncomingDups.compareAuthor" prefstring="extensions.rmIncomingDups.compareAuthor"
+                                  id="extensions.rmIncomingDups.compareAuthor" label="&message_comparison.author.label;"
+                                  accesskey="&message_comparison.author.access_key;" autostretch="never"/>
+                                <checkbox preference="extensions.rmIncomingDups.compareMessageId"
+                                   prefstring="extensions.rmIncomingDups.compareMessageId" id="extensions.rmIncomingDups.compareMessageId"
+                                  label="&message_comparison.message_id.label;" accesskey="&message_comparison.message_id.access_key;"
+                                  autostretch="never"/>
+                                <checkbox preference="extensions.rmIncomingDups.compareLines"
+                                  prefstring="extensions.rmIncomingDups.compareLines" id="extensions.rmIncomingDups.compareLines"
+                                  label="&message_comparison.num_lines.label;" accesskey="&message_comparison.num_lines.access_key;"
+                                  autostretch="never"/>
+                                 <checkbox preference="extensions.rmIncomingDups.compareSendTime"
+                                  prefstring="extensions.rmIncomingDups.compareSendTime" id="extensions.rmIncomingDups.compareSendTime"
+                                  label="&message_comparison.send_time.label;" accesskey="&message_comparison.send_time.access_key;"
+                                  autostretch="never"/>
+                                <checkbox preference="extensions.rmIncomingDups.compareSize"
+                                  prefstring="extensions.rmIncomingDups.compareSize" id="extensions.rmIncomingDups.compareSize"
+                                  label="&message_comparison.size.label;" accesskey="&message_comparison.size.access_key;"
+                                  autostretch="never"/>
+                                <checkbox preference="extensions.rmIncomingDups.compareSubject"
+                                  prefstring="extensions.rmIncomingDups.compareSubject" id="extensions.rmIncomingDups.compareSubject"
+                                  label="&message_comparison.subject.label;" accesskey="&message_comparison.subject.access_key;"
+                                  autostretch="never"/>
+                                <checkbox preference="extensions.rmIncomingDups.compareBody"
+                                  prefstring="extensions.rmIncomingDups.compareBody" id="extensions.rmIncomingDups.compareBody"
+                                  label="&message_comparison.body.label;" accesskey="&message_comparison.body.access_key;"
+                                  autostretch="never"/>
+                            </vbox>
+                        </groupbox>
+                        <hbox align="baseline">
+                            <label value="&message_comparison.time_comparison_resolution.description;"/>
+                            <menulist preference="extensions.rmIncomingDups.compareTime" prefstring="extensions.rmIncomingDups.compareTime"
+                              id="extensions.rmIncomingDups.compareTime">
+                                <menupopup>
+                                    <menuitem value="seconds" label="&message_comparison.time_comparison_resolution.seconds.label;"/>
+                                    <menuitem value="minutes" label="&message_comparison.time_comparison_resolution.minutes.label;"/>
+                                    <menuitem value="hours" label="&message_comparison.time_comparison_resolution.hours.label;"/>
+                                    <menuitem value="day" label="&message_comparison.time_comparison_resolution.day.label;"/>
+                                    <menuitem value="3 days" label="&message_comparison.time_comparison_resolution.3days.label;"/>
+                                </menupopup>
+                            </menulist>
+                        </hbox>
+                    </vbox>
+                </tabpanel>
+                <tabpanel id="rules_panel" flex="1">
+                    <vbox flex="1">
+                        <groupbox>
+                            <caption label="&rules_settings.description;"/>
+                            <listbox id="rulesListBox">
+                                <listhead>
+                                    <listheader label="&rules_settings.nameColumn.label;"/>
+                                    <listheader label="&rules_settings.descriptionColumn.label;"/>
+                                    <listheader label="&rules_settings.accountsColumn.label;"/>
+                                </listhead>
+                                <listcols>
+                                    <listcol style="margin-right:-6px;"/>
+                                    <splitter style="width:0px;height:0px;visibility:hidden;"/>
+                                    <listcol style="margin-right:-6px;min-width:75px;"/>
+                                    <splitter style="width:0px;height:0px;visibility:hidden;"/>
+                                    <listcol flex="2"/>
+                                </listcols>
+                            </listbox>
+                            <hbox>
+                                <button label="&rules_settings.deleteButton.label;" oncommand="rmIncomingDups.rmRule()"/>
+                                <button label="&rules_settings.addButton.label;" oncommand="rmIncomingDups.addRule()"/>
+                                <button label="&rules_settings.modifyButton.label;" oncommand="rmIncomingDups.modifyRule()"/>
+                            </hbox>
+                        </groupbox>
+                    </vbox>
+                </tabpanel>
+            </tabpanels>
+        </tabbox>
+    <label value=" "/>
+    <label value=" "/>
+    </prefpane>
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="rmIncomingDupsTranslations" src="chrome://rmIncomingDups/locale/rmIncomingDups.properties"/>
+    </stringbundleset>
+</prefwindow>

@@ -5,7 +5,8 @@ already present messages. If they are considered identical then an action on the
 incoming message will be performed (mark read,move,delete,delete permanent).
 
 # Features  
-* should have all functionalities that the Cit200.exe of Linksys had (except VoiceMail at the moment)
+* actions: mark read, move to trash, delete, delete permanent
+* matching identical messages: messageID, author, subject, time, body, size, line number,...
 
 # Requirements
 

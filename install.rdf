@@ -9,6 +9,7 @@
     <Description about="urn:mozilla:install-manifest">
         <em:id>rmIncomingDups@pschmidt.it</em:id>
         <em:version>0.1</em:version>
+        <em:name>rmIncomingDups</em:name>
         <em:description>rmIncomingDups is a Thunderbird extension that checks if there are duplicate messages across accounts.
             
 When a new mail arrives rmIncomingDups checks according to the rules configured if it finds some duplicates and removes them.</em:description>
@@ -53,7 +54,7 @@ All'arrivo di un mail, rmIncomingDups controlla se una mail identica esiste ed a
             <Description>
                 <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
                 <em:minVersion>11.0</em:minVersion>
-                <em:maxVersion>15.2b2</em:maxVersion>
+                <em:maxVersion>14.0a1</em:maxVersion>
             </Description>
         </em:targetApplication>
     </Description>      

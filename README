@@ -18,7 +18,7 @@ Software:
 
 * Clone this repository:  
     git clone https://github.com/philsmd/rmIncomingDups.git  
-* Install dependencies:   
+* Install:   
     cd rmIncomingDups.git  
     make    # or simply zip the whole content of the 
             # current folder and rename it to rmIncomingDups.xpi  

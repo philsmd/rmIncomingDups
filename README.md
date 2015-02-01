@@ -1,9 +1,6 @@
 # About
-rmIncomingDups is a Thunderbird extension which allows you to configure rules  
-how incoming emails should be treated that are similar/identical to other  
-already present messages (saved in folders on other email accounts). If they are  
-considered identical then an action on the incoming message will be performed  
-(mark read,move,delete,delete permanent).
+rmIncomingDups is a Thunderbird extension which allows you to configure rules how incoming emails which are similar/identical to other  
+already present messages (saved in folders on other email accounts) should be treated. If they are considered identical then an action on the incoming message will be performed  (mark read, move, delete, delete permanent).
 
 # Features  
 * actions: mark read, move to trash, delete, delete permanent

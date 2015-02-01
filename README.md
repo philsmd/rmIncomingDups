@@ -20,8 +20,7 @@ Software:
     git clone https://github.com/philsmd/rmIncomingDups.git  
 * Install:   
     cd rmIncomingDups.git  
-    + make    # or simply zip the whole content of the  
-              # current folder and rename it to rmIncomingDups.xpi  
+    + make    # or simply zip the whole content of the current folder and rename it to rmIncomingDups.xpi  
     + open thunderbird  
     + install add-on (Tools - Add-ons - Install Add-on From File...)  
     + add toolbox icon (optional, View - Toolbars - Customize...)

@@ -20,13 +20,13 @@ Software:
     git clone https://github.com/philsmd/rmIncomingDups.git  
 * Install:   
     cd rmIncomingDups.git  
-    make    # or simply zip the whole content of the 
-            # current folder and rename it to rmIncomingDups.xpi  
-    # open thunderbird  
-    # install add-on (Tools - Add-ons - Install Add-on From File...)  
-    # add toolbox icon (optional, View - Toolbars - Customize...)
-    # setup your rules (add accounts to a rule)
-    # relax AND/OR contribute
+    + make    # or simply zip the whole content of the  
+              # current folder and rename it to rmIncomingDups.xpi  
+    + open thunderbird  
+    + install add-on (Tools - Add-ons - Install Add-on From File...)  
+    + add toolbox icon (optional, View - Toolbars - Customize...)
+    + setup your rules (add accounts to a rule)
+    + relax AND/OR contribute
 
 # Hacking
 
@@ -38,8 +38,10 @@ Software:
 
 # Credits and Contributors 
   
-WANTED  
+Contributors WANTED  
 (also "only" for translations)
+
+Credits go to: philsmd
 
 # License
 
